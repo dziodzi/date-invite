@@ -1,4 +1,3 @@
-// Здесь можно вписать выбранное место, день и время.
 const CONFIG = {
   place: "Сюрприз 🌚",
   when: "В четверг, в 13:00",
@@ -50,7 +49,7 @@ $('#yes').addEventListener('click', () => {
 $('#back').addEventListener('click', () => go('invite'));
 async function send(text, status) {
   if (navigator.share) {
-    try { await navigator.share({text}); return; }
+    try { await navigator.share({ text }); return; }
     catch (error) { if (error.name === 'AbortError') return; }
   }
   try {
